@@ -4,49 +4,34 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Build;
 import android.os.Bundle;
-import android.support.design.widget.AppBarLayout;
-import android.support.design.widget.CollapsingToolbarLayout;
-import android.support.v4.view.ViewCompat;
-import android.support.v4.widget.NestedScrollView;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
-import android.text.Editable;
-import android.text.InputType;
+import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.appbar.CollapsingToolbarLayout;
+import androidx.core.view.ViewCompat;
+import androidx.core.widget.NestedScrollView;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+
 import android.text.TextUtils;
-import android.text.TextWatcher;
-import android.util.Log;
-import android.view.KeyEvent;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.WindowManager;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
-import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.bsn.nurelfal.Models.IdUser;
-import com.bsn.nurelfal.Models.LimitTrx;
 import com.bsn.nurelfal.Models.Nasabah;
 import com.bsn.nurelfal.Models.Pembatasan;
 import com.bumptech.glide.Glide;
-import com.google.gson.Gson;
-import com.google.gson.JsonSyntaxException;
 import com.jaredrummler.materialspinner.MaterialSpinner;
 import com.mikhaellopez.circularimageview.CircularImageView;
 
@@ -62,8 +47,6 @@ import java.util.Locale;
 import java.util.Map;
 
 import static android.view.View.GONE;
-import static android.view.View.VISIBLE;
-import static com.bsn.nurelfal.Variable.KEY_USER;
 
 public class ResultActivity extends AppCompatActivity {
 
@@ -565,7 +548,7 @@ public class ResultActivity extends AppCompatActivity {
 
         } else {
 
-            InsertTarik();
+           // InsertTarik();
         }
 
 
@@ -727,7 +710,7 @@ public class ResultActivity extends AppCompatActivity {
         pd.show();
 
 
-        CheckEditTextIsEmptyOrNot();
+        //CheckEditTextIsEmptyOrNot();
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, Variable.URL_PENARIKAN,
                 new Response.Listener<String>() {
